@@ -1,0 +1,52 @@
+.charSelectPage{
+    border: solid rebeccapurple;
+}
+.firstContainer{
+    border: solid brown;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.charPreview{
+    border: solid black;
+    height: 380px;
+    /* width: 680px; */
+    width: 45%;
+    margin-left: 200px;
+}
+.secondContainer{
+    border: solid orange;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.textbox{
+    border: solid green;
+    margin: 1em;
+    width: 60%;
+    height: 70px;
+    
+}
+
+.classOptions{
+    border: solid black;
+    width: 250px;
+    /* width: 15%; */
+}
+.charClass{
+    /* border: solid black; */
+    text-align: center;
+    margin: 2px ;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    display: flex;
+    align-items: center;
+}
+.classform{
+    display: flex;
+    border: solid greenyellow;
+    width: 100%;
+    align-items: center;
+}
