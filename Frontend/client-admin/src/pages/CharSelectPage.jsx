@@ -4,12 +4,12 @@ import ClassOption from '../components/ClassOption'
 import Textbox from '../components/Textbox'
 import CharPreview from '../components/CharPreview'
 
-function CharSelectPage({ClassList}) {
+function CharSelectPage({ClassList,userState}) {
   return (
     <div className='charSelectPage'>
       <div className="firstContainer">
         <CharPreview />
-        <ClassOption ClassList={ClassList}/>
+        <ClassOption ClassList={ClassList} userState={userState}/>
       </div>
       <div className="secondContainer">
         <Textbox />

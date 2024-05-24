@@ -44,11 +44,17 @@
 }
 .classform{
     display: flex;
-    border: solid greenyellow;
+    border: solid orange;
     width: 100%;
     align-items: center;
 }
 .name{
     display: flex;
     padding: 1px;
+    width: 100%;
+}
+.myClass{
+    text-align: left;
+    padding: 1px;
+    font-size: 20px;
 }

@@ -1,23 +1,21 @@
-// import React, { useEffect } from 'react'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { SelectClassContext } from '../Context/context'
 
-function CharClass({playStyle}) {
-  const {selectClass,setSelectedClass} = useContext(SelectClassContext)
-  console.log(`selectClass:${selectClass}`)
+function CharClass({playStyle,setUserClass}) {
+  const {selectedClass,setSelectedClass} = useContext(SelectClassContext)
 
 
   const checkClass = (event,val) =>{
-    console.log(val)
+    console.log(val,event)
     if (event.target.checked){
       setSelectedClass(val)
-      console.log(typeof(selectClass))
+      setUserClass(prevState => ({
+        ...prevState,
+        playstyle: playStyle.name
+      }));
     }
   }
-  // useEffect(()=>{
-  //   console.log(selectClass)
-  // },[selectClass])
-
+  
   return (
     <div className='charClass'>
         <input type="checkbox" onChange={(event)=>checkClass(event,playStyle)}/>

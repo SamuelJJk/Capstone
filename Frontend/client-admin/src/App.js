@@ -24,12 +24,21 @@ function App() {
     getClass();
   },[])
 
+  const [userClass,setUserClass] = useState({
+    name:'',
+    playstyle:null,
+    health:0,
+    mana:0,
+    strenght:0,
+    intelligence:0,
+  })
+
   
   return (
     <div className="App">
       <SelectClassProvider>
         <Routes>
-          <Route path='/'element={<CharSelectPage ClassList={AllCharClass}/>}/>
+          <Route path='/'element={<CharSelectPage ClassList={AllCharClass} userState={{userClass,setUserClass}} />}/>
           <Route path='/Game' element={<GamePage/>}/>
         </Routes>
       </SelectClassProvider>
