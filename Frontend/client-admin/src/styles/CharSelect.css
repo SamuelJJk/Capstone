@@ -22,8 +22,7 @@
 }
 .textbox{
     border: solid green;
-    /* margin: 1em; */
-    width: 940px;
+    width: 945px;
     height: 70px;
     
 }
@@ -57,4 +56,17 @@
     text-align: left;
     padding: 1px;
     font-size: 20px;
+}
+
+/* charPreview */
+.playerBox{
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    border: solid black;
+
+}
+.statsContainer{
+    display: flex;
+    justify-content: center;
 }
