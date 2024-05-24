@@ -1,24 +1,22 @@
-import React from 'react'
 import CharClass from './CharClass'
-import { useContext } from 'react'
-import { SelectClassContext } from '../Context/context'
+// import React, { useEffect } from 'react'
+// import { useContext,useState } from 'react'
+// import { SelectClassContext } from '../Context/context'
 
 function ClassOption({ClassList}) {
-const {selectClass,setSelectedClass} = useContext(SelectClassContext)
-// const checkClass = (event,val) =>{
-//   if (event.target.checked){
-//     setSelectedClass(val)
-//     console.log(val)
-//   }
-// }
+// const {selectClass,setSelectedClass} = useContext(SelectClassContext)
+
   return (
     <div className='classOptions'>
-        {ClassList.map((charClass,i) => (
-            <div className='classform'>
-                {/* <input type="checkbox" onChange={(event)=>{checkClass(event,charClass)}}/> */}
-                <CharClass key={i} charClass={charClass} />
+        {ClassList.map((playStyle,i) => (
+            <div key={i} className='classform'>
+                <CharClass playStyle={playStyle} />
             </div>
         ))}
+        <div className="name">
+          <input type="text" />
+          <button className="submit">enter</button>
+        </div>
     </div>
   )
 }

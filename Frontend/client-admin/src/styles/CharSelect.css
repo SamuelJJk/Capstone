@@ -2,29 +2,28 @@
     border: solid rebeccapurple;
 }
 .firstContainer{
-    border: solid brown;
+    /* border: solid brown; */
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 50px;
 }
 .charPreview{
     border: solid black;
     height: 380px;
     /* width: 680px; */
-    width: 45%;
-    margin-left: 200px;
+    width: 690px;
 }
 .secondContainer{
-    border: solid orange;
+    /* border: solid orange; */
     width: 100%;
     display: flex;
     justify-content: center;
 }
 .textbox{
     border: solid green;
-    margin: 1em;
-    width: 60%;
+    /* margin: 1em; */
+    width: 940px;
     height: 70px;
     
 }
@@ -32,7 +31,6 @@
 .classOptions{
     border: solid black;
     width: 250px;
-    /* width: 15%; */
 }
 .charClass{
     /* border: solid black; */
@@ -49,4 +47,8 @@
     border: solid greenyellow;
     width: 100%;
     align-items: center;
+}
+.name{
+    display: flex;
+    padding: 1px;
 }

@@ -7,9 +7,6 @@ import CharPreview from '../components/CharPreview'
 function CharSelectPage({ClassList}) {
   return (
     <div className='charSelectPage'>
-      <div className="title">
-        <h1>Choose your class</h1>
-      </div>
       <div className="firstContainer">
         <CharPreview />
         <ClassOption ClassList={ClassList}/>
