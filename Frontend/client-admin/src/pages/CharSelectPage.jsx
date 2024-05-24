@@ -8,7 +8,7 @@ function CharSelectPage({ClassList,userState}) {
   return (
     <div className='charSelectPage'>
       <div className="firstContainer">
-        <CharPreview />
+        <CharPreview userState={userState}/>
         <ClassOption ClassList={ClassList} userState={userState}/>
       </div>
       <div className="secondContainer">

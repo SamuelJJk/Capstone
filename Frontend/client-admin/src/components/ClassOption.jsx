@@ -5,54 +5,34 @@ import { useContext,useEffect,useState } from 'react'
 
 function ClassOption({ClassList,userState}) {
   const {userClass,setUserClass} = userState
-  const handleStats = () => {
-    if (userClass.playstyle === 'Barbarian') {
-      setUserClass((prevClass) => ({
-        ...prevClass,
-        health: 50,
-        mana: 10,
-        strength: 10,
-        intelligence: 5,
-      }));
-    } else if (userClass.playstyle === 'Bard') {
-      setUserClass((prevClass) => ({
-        ...prevClass,
-        health: 50,
-        mana: 9,
-        strength: 5,
-        intelligence: 8,
-      }));
-    } else if (userClass.playstyle === 'Cleric') {
-      setUserClass((prevClass) => ({
-        ...prevClass,
-        health: 70,
-        mana: 10,
-        strength: 2,
-        intelligence: 8,
-      }));
-    } else if (userClass.playstyle === 'Druid') {
-      setUserClass((prevClass) => ({
-        ...prevClass,
-        health: 30,
-        mana: 40,
-        strength: 6,
-        intelligence: 6,
-      }));
-    } else if (userClass.playstyle === 'Fighter') {
-      setUserClass((prevClass) => ({
-        ...prevClass,
-        health: 50,
-        mana: 8,
-        strength: 8,
-        intelligence: 8,
-      }));
+  const [prevPlaystyle, setPrevPlaystyle] = useState(null);
+
+  const getStatsForPlaystyle = (playstyle) => {
+    switch (playstyle) {
+      case 'Barbarian':
+        return { health: 50, mana: 10, strength: 10, intelligence: 5 };
+      case 'Bard':
+        return { health: 50, mana: 9, strength: 5, intelligence: 8 };
+      case 'Cleric':
+        return { health: 70, mana: 10, strength: 2, intelligence: 8 };
+      case 'Druid':
+        return { health: 30, mana: 40, strength: 6, intelligence: 6 };
+      case 'Fighter':
+        return { health: 50, mana: 8, strength: 8, intelligence: 8 };
+      default:
+        return {};
     }
   };
-  
 
-  useEffect(()=>{
-    handleStats()
-  },[])
+  useEffect(() => {
+    if (userClass.playstyle !== prevPlaystyle) {
+      setUserClass((prevClass) => ({
+        ...prevClass,
+        ...getStatsForPlaystyle(userClass.playstyle),
+      }));
+      setPrevPlaystyle(userClass.playstyle);
+    }
+  }, [userClass.playstyle, prevPlaystyle, setUserClass]);
   return (
     <div className='classOptions'>
         {ClassList.map((playStyle,i) => (
