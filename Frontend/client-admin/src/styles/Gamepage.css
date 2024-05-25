@@ -1,0 +1,51 @@
+.gamepage{
+
+}
+.firstContainer{
+    border: solid black;
+    display: flex;
+    justify-content: space-around;
+}
+.secondContainer{
+    border: solid black;
+}
+.screen{
+    width: 980px;
+    height: 550px;
+}
+.playerStats{
+    border: solid pink;
+    height:100px;
+    width: 300px;
+}
+.enemiesStats{
+    border: solid pink;
+    height:100px;
+    width: 300px;
+}
+
+/* StatsBox */
+.statsBox{
+    border: solid orange;
+    height: 100%;
+}
+.stats{
+    border: solid green;
+    height: 30%;
+    display: flex;
+    display: flex;
+    justify-content: space-evenly;
+}
+.info{
+    border: solid yellowgreen;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.icon{
+    border: solid black;
+    width: 30%;
+    height: 100%;
+}
