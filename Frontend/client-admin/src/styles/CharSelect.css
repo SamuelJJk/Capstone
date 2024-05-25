@@ -9,10 +9,10 @@
     margin-top: 50px;
 }
 .charPreview{
-    border: solid black;
+    border: solid #00548C;
     height: 380px;
-    /* width: 680px; */
     width: 690px;
+    background-color: #3A6D90;
 }
 .secondContainer{
     /* border: solid orange; */
@@ -28,8 +28,9 @@
 }
 
 .classOptions{
-    border: solid black;
+    border:solid #00548C;
     width: 250px;
+    background-color: #3A6D90;
 }
 .charClass{
     /* border: solid black; */
@@ -63,7 +64,8 @@
     font-size: 30px;
     display: flex;
     justify-content: space-around;
-    border: solid black;
+    border: solid #0043FF;
+    background-color: #88ACCC;
 
 }
 .statsContainer{

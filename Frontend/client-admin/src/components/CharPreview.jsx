@@ -6,7 +6,7 @@ function CharPreview({ userState }) {
   return (
     <div className='charPreview'>
       <div className="playerBox">
-        <div className="playersName">{userClass.name}</div>
+        <div className="playerName">{userClass.name}</div>
         <div className='statsContainer'>
           <div className="health">Health:{userClass.health}</div>
           <div>/</div>

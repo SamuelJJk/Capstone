@@ -8,7 +8,19 @@ import {SelectClassProvider} from './providers/Providers';
 
 
 function App() {
+  const [backendData,SetBackendData]= useState();
 
+  useEffect(()=>{
+    fetch("/character",).then(
+      response => response.json()
+    ).then(
+      data =>{
+        SetBackendData(data)
+      }
+    )
+  },[])
+
+  
   // Api for classes
   const [AllCharClass,setAllCharClass] =useState([]);
   const getClass =async()=>{
