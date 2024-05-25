@@ -4,23 +4,12 @@ import CharSelectPage from './pages/CharSelectPage'
 import GamePage from './pages/GamePage'
 import { useEffect, useState } from 'react';
 import {SelectClassProvider} from './providers/Providers';
+import axios from 'axios'
 
 
 
 function App() {
-  const [backendData,SetBackendData]= useState();
 
-  useEffect(()=>{
-    fetch("/character",).then(
-      response => response.json()
-    ).then(
-      data =>{
-        SetBackendData(data)
-      }
-    )
-  },[])
-
-  
   // Api for classes
   const [AllCharClass,setAllCharClass] =useState([]);
   const getClass =async()=>{
@@ -44,14 +33,31 @@ function App() {
     strenght:0,
     intelligence:0,
   })
+  // my backend Data
+  const [backendData,SetBackendData]= useState();
+
+  useEffect(()=>{
+    fetch("/character",).then(
+      response => response.json()
+    ).then(
+      data =>{
+        SetBackendData(data)
+      }
+    )
+  },[])
+    // create Character
+    const createChar =async()=>{
+      const res = await axios.post("/character",userClass)
+      console.log(res)
+    }
 
   
   return (
     <div className="App">
       <SelectClassProvider>
         <Routes>
-          <Route path='/'element={<CharSelectPage ClassList={AllCharClass} userState={{userClass,setUserClass}} />}/>
-          <Route path='/Game' element={<GamePage/>}/>
+          <Route path='/'element={<CharSelectPage ClassList={AllCharClass} userState={{userClass,setUserClass}} createChar={createChar}/>}/>
+          <Route path='/Game' element={<GamePage backendData={backendData}/>}/>
         </Routes>
       </SelectClassProvider>
     </div>

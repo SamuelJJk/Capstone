@@ -4,12 +4,12 @@ import '../styles/Gamepage.css'
 import StatsBox from '../components/StatsBox'
 
 
-function GamePage() {
+function GamePage({backendData}) {
   return (
     <div className='gamepage'>
-      <div className="firstContainer">
+      <div className="statsContainer">
         <div className="playerStats">
-          <StatsBox />
+          <StatsBox backendData={backendData}/>
         </div>
         <div className="enemiesStats">
           <StatsBox />

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function StatsBox() {
+function StatsBox({props}) {
   return (
     <div className='statsBox'>
       <div className="stats">

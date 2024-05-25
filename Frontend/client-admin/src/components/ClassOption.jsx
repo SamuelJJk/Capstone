@@ -3,7 +3,7 @@ import CharClass from './CharClass'
 import { useContext,useEffect,useState } from 'react'
 // import { SelectClassContext } from '../Context/context'
 
-function ClassOption({ClassList,userState}) {
+function ClassOption({ClassList,userState,createChar}) {
   const {userClass,setUserClass} = userState
   const [prevPlaystyle, setPrevPlaystyle] = useState(null);
 
@@ -50,7 +50,7 @@ function ClassOption({ClassList,userState}) {
                 name: e.target.value,
             }))
           }/>
-          <button className="submit">enter</button>
+          <button className="submit" onClick={createChar}>enter</button>
         </div>
     </div>
   )

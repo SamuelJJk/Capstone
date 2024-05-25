@@ -49,6 +49,11 @@ app.put("/character/:name",async(req,res)=>{
     res.json(character)
 })
 //delete
+app.delete("/character/deleteAll",async(req,res)=>{
+    console.log(req.body)
+    const character = await Character.deleteMany({})
+    res.json(character)
+})
 app.delete("/character/delete/:name",async(req,res)=>{
     const characterName = req.params.name
     const characterid = req.params.id

@@ -1,7 +1,4 @@
-.gamepage{
-
-}
-.firstContainer{
+.statsContainer{
     border: solid black;
     display: flex;
     justify-content: space-around;
