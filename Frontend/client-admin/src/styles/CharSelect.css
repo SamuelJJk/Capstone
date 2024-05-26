@@ -72,3 +72,28 @@
     display: flex;
     justify-content: center;
 }
+.imagesList{
+    border: solid black;
+    display: flex;
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.charIcons{
+    border: solid orange;
+    height: 120px;
+    width: 120px;
+    margin: 5px;
+    background-color: goldenrod;
+}
+.charIcons:hover{
+    cursor: pointer;
+    border: solid #00548C;
+    background-color:#0043FF;
+}
+.charIcons img{
+    height: 100%;
+    width: 100%;
+    object-fit: fit;
+}
