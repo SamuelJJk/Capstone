@@ -1,26 +1,69 @@
 .statsContainer{
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     justify-content: space-around;
 }
 .secondContainer{
     border: solid black;
 }
-.screen{
-    width: 980px;
-    height: 550px;
-}
 .playerStats{
-    border: solid pink;
+    /* border: solid pink; */
     height:100px;
     width: 300px;
 }
 .enemiesStats{
-    border: solid pink;
+    /* border: solid pink; */
     height:100px;
     width: 300px;
 }
 
+
+/*Game Screen  */
+.screen{
+    width: 980px;
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+.btn {
+    /* border: solid black; */
+    height: 200px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* store component  */
+.store{
+    border: solid blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.window{
+    border: solid black;
+    width: 50%;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.itemName{
+    border: solid green;
+    width: 300px;
+}
+.amount{
+    border: solid green ;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
 /* StatsBox */
 .statsBox{
     border: solid orange;

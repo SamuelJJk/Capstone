@@ -58,7 +58,7 @@ function App() {
       <SelectClassProvider>
         <Routes>
           <Route path='/'element={<CharSelectPage ClassList={AllCharClass} userState={{userClass,setUserClass}} createChar={createChar}/>}/>
-          <Route path='/Game' element={<GamePage backendData={backendData}/>}/>
+          <Route path='/Game' element={<GamePage backendData={backendData} />}/>
         </Routes>
       </SelectClassProvider>
     </div>

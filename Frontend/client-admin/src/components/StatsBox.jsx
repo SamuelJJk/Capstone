@@ -1,19 +1,30 @@
 import React from 'react'
 
-function StatsBox({props}) {
-  return (
-    <div className='statsBox'>
+function StatsBox({character}) {
+  const something =()=>{
+    if(character){
+     return( <div className='statsBox'>
       <div className="stats">
-        <div className="health">Hp: /</div>
-        <div className="mana">Mp: /</div>
-        <div className="strength">Str: /</div>
-        <div className="intel">Int: </div>
+        <div className="health">Hp:{character.health} </div>
+        <div>/</div>
+        <div className="mana">Mp:{character.mana}</div>
+        <div>/</div>
+        <div className="strength">Str:{character.strength}</div>
+        <div>/</div>
+        <div className="intel">Int: {character.intelligence}</div>
       </div>
       <div className="info">
-        <img src="https://media.pocketgamer.com/artwork/na-wrds/mario-2.png" alt="" className="icon" />
-        <div className="name">juice wrld</div>
+        <img src={character.image} alt="" className="icon" />
+        <div className="name">{character.name}</div>
       </div>
     </div>
+    )
+    }else{
+      return <div>Loading</div>
+    }
+  }
+  return (
+    something()
   )
 }
 
