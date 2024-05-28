@@ -4,7 +4,8 @@ const itemSchema = new mongoose.Schema({
     name:String,
     type:String,
     effect:String,
-    value:Number
+    value:Number,
+    price:Number
 });
 
 const Item = mongoose.model("Item",itemSchema);

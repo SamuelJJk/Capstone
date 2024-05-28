@@ -8,6 +8,7 @@ const characterSchema = new mongoose.Schema({
     strength:Number,
     intelligence:Number,
     image:String,
+    money:{type:Number,default:100},
 });
 
 const Character = mongoose.model("Character",characterSchema);
