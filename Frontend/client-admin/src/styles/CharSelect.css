@@ -58,6 +58,17 @@
     padding: 1px;
     font-size: 20px;
 }
+.intructions{
+    /* border: solid pink; */
+    margin: 5px;
+    color: black;
+    text-align: left;
+    font-size: 15px;
+}
+.highlight{
+    color: orange;
+    font-style: italic;
+}
 
 /* charPreview */
 .playerBox{

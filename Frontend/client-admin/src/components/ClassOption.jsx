@@ -41,16 +41,21 @@ function ClassOption({ClassList,userState,createChar}) {
             </div>
         ))}
         <div className='myClass'>{userClass.playstyle}</div>
-        <div className="name">
-          <input type="text"
-            value={userClass.name}
-            onChange={(e) =>
-              setUserClass((prevClass) => ({
-                ...prevClass,
-                name: e.target.value,
-            }))
-          }/>
-          <button className="submit" onClick={createChar}>enter</button>
+        <div>
+          <div>
+            <div className='intructions'>Please Enter your <span className='highlight'>Name</span>, <span className='highlight'>Icon</span>, and <span className='highlight'>Class</span>,then click enter to start</div>
+          </div>
+          <div className="name" >
+            <input type="text"
+              value={userClass.name}
+              onChange={(e) =>
+                setUserClass((prevClass) => ({
+                  ...prevClass,
+                  name: e.target.value,
+              }))
+            }/>
+            <button className="submit" onClick={createChar}>enter</button>
+          </div>
         </div>
     </div>
   )
