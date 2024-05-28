@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/CharSelect.css'
 import ClassOption from '../components/ClassOption'
-import Textbox from '../components/Textbox'
 import CharPreview from '../components/CharPreview'
 
 function CharSelectPage({ClassList,userState,createChar}) {

@@ -86,6 +86,13 @@ app.post("/item",async(req,res)=>{
     console.log(req.body)
     res.json(item)
 })
+app.delete("/item/:name", async(req, res) => {
+    const itemName = req.params.name;
+    const itemId = req.params.id;
+
+    await Item.deleteOne({ itemId });
+    res.json({ success: "Record has been deleted successfully" });
+});
 
 
 

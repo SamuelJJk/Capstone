@@ -26,8 +26,8 @@ function ClassOption({ClassList,userState,createChar}) {
 
   useEffect(() => {
     if (userClass.playstyle !== prevPlaystyle) {
-      setUserClass((prevClass) => ({
-        ...prevClass,
+      setUserClass(() => ({
+        ...userClass,
         ...getStatsForPlaystyle(userClass.playstyle),
       }));
       setPrevPlaystyle(userClass.playstyle);

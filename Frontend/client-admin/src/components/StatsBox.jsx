@@ -1,7 +1,7 @@
 import React from 'react'
 
 function StatsBox({character}) {
-  const something =()=>{
+  const initialLoad =()=>{
     if(character){
      return( <div className='statsBox'>
       <div className="stats">
@@ -24,7 +24,7 @@ function StatsBox({character}) {
     }
   }
   return (
-    something()
+    initialLoad()
   )
 }
 

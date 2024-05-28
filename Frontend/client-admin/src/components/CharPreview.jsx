@@ -4,8 +4,8 @@ import '../styles/CharSelect.css'
 function CharPreview({ userState }) {
   const { userClass,setUserClass } = userState;
   const pickProfle =(src)=>{
-    setUserClass((prevClass) => ({
-      ...prevClass,
+    setUserClass(() => ({
+      ...userClass,
       image: src,
     }));
   }
