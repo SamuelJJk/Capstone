@@ -5,6 +5,7 @@ const enemySchema = new mongoose.Schema({
     health:Number,
     strength:Number,
     intelligence:Number,
+    image:String
 });
 
 const Enemy = mongoose.model("Enemy",enemySchema);

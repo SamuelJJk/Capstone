@@ -7,6 +7,7 @@ const characterSchema = new mongoose.Schema({
     mana:Number,
     strength:Number,
     intelligence:Number,
+    image:String,
 });
 
 const Character = mongoose.model("Character",characterSchema);

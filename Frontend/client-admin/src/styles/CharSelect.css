@@ -1,5 +1,5 @@
 .charSelectPage{
-    border: solid rebeccapurple;
+    /* border: solid rebeccapurple; */
 }
 .firstContainer{
     /* border: solid brown; */
@@ -81,11 +81,11 @@
     flex-wrap: wrap;
 }
 .charIcons{
-    border: solid orange;
+    border: solid #7678ED;
     height: 120px;
     width: 120px;
     margin: 5px;
-    background-color: goldenrod;
+    background-color: #3D348B;
 }
 .charIcons:hover{
     cursor: pointer;

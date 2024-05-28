@@ -11,9 +11,6 @@ function CharSelectPage({ClassList,userState,createChar}) {
         <CharPreview userState={userState}/>
         <ClassOption ClassList={ClassList} userState={userState} createChar={createChar}/>
       </div>
-      <div className="secondContainer">
-        <Textbox />
-      </div>
     </div>
   )
 }

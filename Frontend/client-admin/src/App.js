@@ -32,6 +32,7 @@ function App() {
     mana:0,
     strenght:0,
     intelligence:0,
+    image:"",
   })
   // my backend Data
   const [backendData,SetBackendData]= useState();
