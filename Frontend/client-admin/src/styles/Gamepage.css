@@ -42,16 +42,28 @@
     display: flex;
     width: inherit;
     height:8% ;
+    align-items: center;
 
 }
-.actions button {
+.goBack {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #228B22 ;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    
+}
+.startOver{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #B22222  ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
 }
 /* Home Component  */
 .home{
@@ -95,6 +107,10 @@
 .window{
     border: solid black;
     width: 50%;
+    overflow-y: scroll;
+}
+.window::-webkit-scrollbar {
+    display: none;
 }
 .item{
     display: flex;

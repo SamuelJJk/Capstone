@@ -1,12 +1,21 @@
 .charSelectPage{
     /* border: solid rebeccapurple; */
+    background-image: url('https://i.pinimg.com/originals/aa/ef/6f/aaef6f6cd3a1d222b512027842a0ff8a.gif');
+    background-size:cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .firstContainer{
     /* border: solid brown; */
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .charPreview{
     border: solid #00548C;
