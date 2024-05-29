@@ -18,6 +18,7 @@ function StatsBox({character}) {
         <img src={character.image} alt="" className="icon" />
         <div className="name">{character.name}</div>
       </div>
+      <div className='money'>Coins: {character.money}</div>
     </div>
     )
     }else{

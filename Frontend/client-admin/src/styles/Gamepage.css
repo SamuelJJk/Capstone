@@ -1,8 +1,4 @@
-.statsContainer{
-    /* border: solid black; */
-    display: flex;
-    justify-content: space-around;
-}
+
 .secondContainer{
     border: solid black;
 }
@@ -64,28 +60,65 @@
     justify-content: center;
     width: 100px;
 }
-/* StatsBox */
-.statsBox{
-    border: solid orange;
-    height: 100%;
-}
-.stats{
-    border: solid green;
-    height: 30%;
+
+
+/* Stat box  */
+
+.statsContainer {
+    border: 2px solid black;
     display: flex;
+    justify-content: space-around;
+    height: 150px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.statsBox {
+    border: 2px solid hsl(39, 100%, 50%);
+    height: 100%;
+    width: 50%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stats {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
+    font-size: 14px;
+    color: #333;
 }
-.info{
-    border: solid yellowgreen;
-    height: 70%;
+
+.info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    padding-top: 10px;
 }
-.icon{
-    border: solid black;
+
+.icon {
     width: 30%;
-    height: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
+
+.money {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
 }
