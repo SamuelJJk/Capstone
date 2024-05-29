@@ -22,7 +22,7 @@ function StatsBox({character}) {
     </div>
     )
     }else{
-      return <div>Loading</div>
+      return <div></div>
     }
   }
   return (

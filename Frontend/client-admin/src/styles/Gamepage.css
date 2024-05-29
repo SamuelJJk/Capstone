@@ -1,6 +1,6 @@
-
-.secondContainer{
-    border: solid black;
+.gamepage{
+    background-image: url('https://i.pinimg.com/originals/1d/a4/cd/1da4cd1771b784d6829729fb56ae9b88.gif');
+    background-size: cover;
 }
 .playerStats{
     /* border: solid pink; */
@@ -25,17 +25,23 @@
     background-color: white;
     padding: 10px;
     border-radius: 10px;
+    background-image: url('https://i.pinimg.com/originals/1d/a4/cd/1da4cd1771b784d6829729fb56ae9b88.gif');
+    background-size: cover;
 }
 .screenDisplay{
-    border: solid green;
+    /* border: solid green; */
     width: inherit;
     height: 90%;
+  background-color: rgba(250, 235, 215, 0.745);
+  border-radius: 10px;
+
 }
 .actions{
     /* border: solid pink; */
     display: flex;
     width: inherit;
-    height: 8% inherit;
+    height:8% ;
+
 }
 .actions button {
     padding: 10px 20px;
@@ -46,7 +52,26 @@
     border-radius: 5px;
     cursor: pointer;
 }
+/* Home Component  */
+.home{
+    border: solid orange;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #88accc6e;
 
+}
+.btn{
+    border: solid black;
+    height: 200px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
 
 /* store component  */
 .store {
@@ -84,7 +109,7 @@
     display: flex;
     justify-content: space-around;
     height: 150px;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
     padding: 10px;
 }
 
@@ -136,18 +161,4 @@
     font-size: 14px;
     color: #333;
     text-align: center;
-}
-/* Home Component  */
-.home{
-    border: solid green;
-}
-.btn{
-    border: solid black;
-    height: 200px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
 }
