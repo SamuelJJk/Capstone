@@ -16,9 +16,12 @@ function StatsBox({character}) {
       </div>
       <div className="info">
         <img src={character.image} alt="" className="icon" />
-        <div className="name">{character.name}</div>
+        <div className="Name-and-coin">
+          <div className="name">{character.name}</div>
+          <div className='money'><img className='coin' src="https://i.pinimg.com/originals/f9/da/09/f9da09a345b352d9f6cd4e59f66197c4.png" alt="" />{character.money}</div>
+        </div>
       </div>
-      <div className='money'>Coins: {character.money}</div>
+      
     </div>
     )
     }else{

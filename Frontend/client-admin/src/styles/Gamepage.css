@@ -140,7 +140,7 @@
 .statsBox {
     border: 2px solid hsl(39, 100%, 50%);
     height: 100%;
-    width: 50%;
+    width: 60%;
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
@@ -162,10 +162,21 @@
 
 .info {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     padding-top: 10px;
+}
+.money{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coin{
+    /* border: solid green; */
+    width: 20px;
+    object-fit: cover;
+    margin-right: 5px;
 }
 
 .icon {

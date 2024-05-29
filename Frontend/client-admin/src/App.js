@@ -39,14 +39,26 @@ function App() {
   const [backendData,SetBackendData]= useState();
 
   useEffect(()=>{
-    fetch("/character",).then(
-      response => response.json()
-    ).then(
-      data =>{
-        SetBackendData(data)
-      }
-    )
+    // fetch("/character",).then(
+    //   response => response.json()
+    // ).then(
+    //   data =>{
+    //     SetBackendData(data)
+    //   }
+    // )
+    fetchBackendData();
   },[])
+
+  const fetchBackendData = async()=>{
+    const res = await fetch('/character')
+    const data = await res.json();
+    SetBackendData(data)
+  }
+
+
+
+
+
 
   
   // create Character
