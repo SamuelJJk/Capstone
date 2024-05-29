@@ -25,7 +25,9 @@ function Store() {
       <div className='window'>
         {initialLoad()}
       </div>
-      <div className='window'>Preview</div>
+      <div className='window'>
+        preview
+      </div>
     </div>
   )
 }
