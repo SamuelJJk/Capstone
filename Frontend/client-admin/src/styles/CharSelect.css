@@ -84,7 +84,6 @@
     justify-content: center;
 }
 .imagesList{
-    border: solid black;
     display: flex;
     height: 85%;
     justify-content: center;

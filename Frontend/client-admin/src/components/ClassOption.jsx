@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CharClass from './CharClass'
 // import React, { useEffect } from 'react'
 import { useContext,useEffect,useState } from 'react'
@@ -43,7 +44,7 @@ function ClassOption({ClassList,userState,createChar}) {
         <div className='myClass'>{userClass.playstyle}</div>
         <div>
           <div>
-            <div className='intructions'>Please Enter your <span className='highlight'>Name</span>, <span className='highlight'>Icon</span>, and <span className='highlight'>Class</span>,then click enter to start</div>
+            <div className='intructions'>Please Enter your <span className='highlight'>Name</span>, <span className='highlight'>picture</span>, and <span className='highlight'>Class</span>,then click enter to start</div>
           </div>
           <div className="name" >
             <input type="text"

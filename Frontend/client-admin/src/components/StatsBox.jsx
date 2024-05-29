@@ -3,7 +3,8 @@ import React from 'react'
 function StatsBox({character}) {
   const initialLoad =()=>{
     if(character){
-     return( <div className='statsBox'>
+     return( 
+     <div className='statsBox'>
       <div className="stats">
         <div className="health">Hp:{character.health} </div>
         <div>/</div>

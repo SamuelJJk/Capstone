@@ -9,11 +9,16 @@ function GamePage() {
   const [myChar,setMyChar] = useState();
   const getMyChar =async()=>{
     const res = await axios.get(`/character`)
-    setMyChar(res.data[1])
+    const data = res.data
+    if(data.length === 1){
+      setMyChar(data[0])
+    }else{
+      setMyChar(data[data.length - 1])
+    }
   }
   useEffect(() => {
     getMyChar();
-  }, []);
+  });
   return (
     <div className='gamepage'>
       <div className="statsContainer">

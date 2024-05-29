@@ -5,6 +5,7 @@ import GamePage from './pages/GamePage'
 import { useEffect, useState } from 'react';
 import {SelectClassProvider} from './providers/Providers';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -46,11 +47,16 @@ function App() {
       }
     )
   },[])
-    // create Character
-    const createChar =async()=>{
-      const res = await axios.post("/character",userClass)
-      console.log(res)
-    }
+
+  
+  // create Character
+  const navigate = useNavigate();
+  const createChar =async()=>{
+    const res = await axios.post("/character",userClass)
+    console.log(res)
+    navigate('/Game');
+    
+  }
 
   
   return (
