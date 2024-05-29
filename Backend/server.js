@@ -29,7 +29,7 @@ app.get("/character/:name",async(req,res)=>{
 // create
 app.post("/character",async(req,res)=>{
     const character = await Character.create(req.body)
-    console.log(req.body)
+    // console.log(req.body)
     res.json(character)
 })
 //update
