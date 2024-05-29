@@ -16,24 +16,25 @@
 
 /*Game Screen  */
 .screen {
+    margin: 14px;
+    border: solid #FFD700 2px;
     width: 980px;
     height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 30px;
-    background-color: white;
+    background: linear-gradient(to bottom,#3A6D90, #4169E1, #00548C);
     padding: 10px;
     border-radius: 10px;
-    background-image: url('https://i.pinimg.com/originals/1d/a4/cd/1da4cd1771b784d6829729fb56ae9b88.gif');
+    /* background-image: url('https://i.pinimg.com/originals/1d/a4/cd/1da4cd1771b784d6829729fb56ae9b88.gif'); */
     background-size: cover;
 }
 .screenDisplay{
     /* border: solid green; */
     width: inherit;
     height: 90%;
-  background-color: rgba(250, 235, 215, 0.745);
-  border-radius: 10px;
+    border-radius: 10px;
 
 }
 .actions{
@@ -46,7 +47,7 @@
 .actions button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #00548C;
+    background-color: #228B22 ;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -54,16 +55,15 @@
 }
 /* Home Component  */
 .home{
-    border: solid orange;
-    height: 100%;
+    /* border: solid orange 2px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #88accc6e;
-
+    padding: 20px;
+    box-sizing: border-box;
 }
-.btn{
-    border: solid black;
+.btn {
+    border: solid black 2px;
     height: 200px;
     width: 300px;
     display: flex;
@@ -71,6 +71,17 @@
     justify-content: center;
     text-align: center;
     cursor: pointer;
+    background: #f0f0f0;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
 }
 
 /* store component  */
@@ -91,26 +102,39 @@
     margin: 1em;
 }
 .itemName{
-    border: solid green;
+    border-bottom:1px solid black;
     width: 300px;
 }
 .amount{
-    border: solid green ;
+    border-bottom:1px solid black ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+}
+.btn4Quantity{
+    border: none;
+    color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
     display: flex;
     justify-content: center;
-    width: 100px;
+    align-items: center;
 }
 
 
 /* Stat box  */
 
 .statsContainer {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     justify-content: space-around;
     height: 150px;
     /* background-color: #f0f0f0; */
     padding: 10px;
+    
 }
 
 .statsBox {
@@ -124,6 +148,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0px 10px;
 }
 
 .stats {
@@ -162,3 +187,4 @@
     color: #333;
     text-align: center;
 }
+

@@ -17,9 +17,9 @@ function Item({item}) {
     <div className='item'>
       <div className="itemName">{item.name}</div>
       <div className="amount">
-        <button onClick={()=>{count("-")}}>-</button>
+        <button className='btn4Quantity' onClick={()=>{count("-")}}>-</button>
         <div className="quantity">{quantity}</div>
-        <button onClick={()=>{count("+")}}>+</button>
+        <button className='btn4Quantity' onClick={()=>{count("+")}}>+</button>
       </div>
 
     </div>
