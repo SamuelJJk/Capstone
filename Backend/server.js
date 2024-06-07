@@ -4,8 +4,8 @@ const PORT = process.env.PORT || 3000;
 const connectToDB = require('./config')
 //routes
 const characterRoute = require('./routes/characterRoutes')
+const itemRoute = require ('./routes/itemRoutes')
 //models
-const Item = require('./models/itemModel')
 const Enemy = require('./models/enemyModel')
 //middleware
 app.use(express.urlencoded({ extended: true }));
@@ -17,35 +17,13 @@ app.get("/",(req,res)=>{
     res.send("index page")
 })
 
-//Calling character route
-app.use('/character', characterRoute)
+//Calling all routes
+app.use('/character', characterRoute);
+app.use('/item', itemRoute);
 
 
 
-// Items route
-// read
-app.get("/item",async(req,res)=>{
-    const item = await Item.find()
-    res.json(item)
-})
-app.get("/item/:name",async(req,res)=>{
-    const itemName = req.params.name
-    const item = await Item.findOne({name :itemName})
-    res.json(item)
-})
-//create
-app.post("/item",async(req,res)=>{
-    const item = await Item.create(req.body)
-    console.log(req.body)
-    res.json(item)
-})
-app.delete("/item/:name", async(req, res) => {
-    const itemName = req.params.name;
-    const itemId = req.params.id;
 
-    await Item.deleteOne({ itemId });
-    res.json({ success: "Record has been deleted successfully" });
-});
 
 
 

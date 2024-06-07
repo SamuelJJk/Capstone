@@ -4,6 +4,7 @@ import axios from 'axios';
 
 function Store() {
   const [items,setItems] =useState();
+  const [viewItem,setViewItem] = useState();
   const fetchItems =async()=>{
     const res = await axios.get('/item')
     setItems(res.data)
