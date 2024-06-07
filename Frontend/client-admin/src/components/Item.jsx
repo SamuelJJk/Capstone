@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 
-function Item({item}) {
+function Item({item,setViewItem}) {
+  //func to update state on which item is being clicked
+  const clickedItem = ()=>{
+    setViewItem(item.name)
+  }
+  //State that track the amount the user whats of an item 
   const [quantity,setQuantity] = useState(0)
   const count =(operation)=>{
     if(operation === "+"){
@@ -15,7 +20,7 @@ function Item({item}) {
   }
   return (
     <div className='item'>
-      <div className="itemName">{item.name}</div>
+      <div className="itemName" onClick={()=>{clickedItem()}}>{item.name}</div>
       <div className="amount">
         <button className='btn4Quantity' onClick={()=>{count("-")}}>-</button>
         <div className="quantity">{quantity}</div>
