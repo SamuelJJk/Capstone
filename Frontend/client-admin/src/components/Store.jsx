@@ -17,8 +17,8 @@ function Store() {
   //This function is for when the page is waiting for data 
   const initialLoad = () => {
     if (items) {
-      return items.map((item) => (
-        <Item key={item.id} item={item} setViewItem={setViewItem}/>
+      return items.map((item,index) => (
+        <Item key={index} item={item} setViewItem={setViewItem}/>
       ));
     } else {
       return <div>Waiting for items to load</div>;
@@ -35,7 +35,7 @@ function Store() {
         {initialLoad()}
       </div>
       <div className='window'>
-        <ItemPreview />
+        <ItemPreview viewItem={viewItem}/>
       </div>
     </div>
   )

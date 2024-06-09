@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ItemPreview() {
+function ItemPreview({viewitem}) {
   return (
     <div className='itemPreview'>
-        item Preview!
+        <div>{viewitem}</div>
     </div>
   )
 }
