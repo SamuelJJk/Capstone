@@ -35,7 +35,7 @@ function Store() {
         {initialLoad()}
       </div>
       <div className='window'>
-        <ItemPreview viewItem={viewItem}/>
+        <ItemPreview item={viewItem}/>
       </div>
     </div>
   )
