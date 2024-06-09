@@ -3,8 +3,9 @@ function ItemPreview({item}) {
         if(item){
             return (
                 <>
-                    <div>{item.name}</div>    
-                    <div>{item.effect}</div>    
+                    <div className="selectedItemImage"><img src="" alt="" /></div>
+                    <div className="selectedItemName">{item.name}</div>    
+                    <div className="selectedItemEffect">{item.effect}</div>    
                 </>
             )
         }

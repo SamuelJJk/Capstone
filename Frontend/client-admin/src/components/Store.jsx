@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Item from './Item'
 import axios from 'axios';
 import ItemPreview from './ItemPreview';
+import Cart from './Cart';
 
 function Store() {
   //This is the state that store my items from my database
@@ -35,11 +36,11 @@ function Store() {
         {initialLoad()}
       </div>
       <div className='window'>
-        <div className='itemInfo'>
+        <div className='itemWindow'>
           <ItemPreview item={viewItem}/>
         </div>
-        <div className='cart'>
-          cart
+        <div className='cartWindow'>
+          <Cart/>
         </div>
       </div>
     </div>
