@@ -139,6 +139,9 @@
     justify-content: center;
     align-items: center;
 }
+.cart{
+    border: solid black;
+}
 
 
 /* Stat box  */

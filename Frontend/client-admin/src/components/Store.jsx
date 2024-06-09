@@ -35,7 +35,12 @@ function Store() {
         {initialLoad()}
       </div>
       <div className='window'>
-        <ItemPreview item={viewItem}/>
+        <div className='itemInfo'>
+          <ItemPreview item={viewItem}/>
+        </div>
+        <div className='cart'>
+          cart
+        </div>
       </div>
     </div>
   )
