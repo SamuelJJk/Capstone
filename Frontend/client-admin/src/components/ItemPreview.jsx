@@ -1,4 +1,5 @@
 function ItemPreview({item}) {
+    // func for when item state is empty 
     const initialLoad =()=>{
         if(item){
             return (

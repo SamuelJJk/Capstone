@@ -10,8 +10,22 @@ import { useNavigate } from 'react-router-dom';
 
 
 function App() {
+    const navigate = useNavigate();
 
-  // Api for classes
+    // my backend Data
+    const [backendData,SetBackendData]= useState();
+    
+    const fetchBackendData = async()=>{
+      const res = await fetch('/character')
+      const data = await res.json();
+      SetBackendData(data)
+    }
+
+    useEffect(()=>{
+      fetchBackendData();
+    },[])
+
+  // Using a API to generate the playstyles which will be displayed in the CharSelectPage
   const [AllCharClass,setAllCharClass] =useState([]);
   const getClass =async()=>{
     try{
@@ -26,6 +40,8 @@ function App() {
     getClass();
   },[])
 
+
+  // State that hold the data of the char's class,stats,name
   const [userClass,setUserClass] = useState({
     name:'',
     playstyle:null,
@@ -35,34 +51,8 @@ function App() {
     intelligence:0,
     image:"",
   })
-  // my backend Data
-  const [backendData,SetBackendData]= useState();
 
-  useEffect(()=>{
-    // fetch("/character",).then(
-    //   response => response.json()
-    // ).then(
-    //   data =>{
-    //     SetBackendData(data)
-    //   }
-    // )
-    fetchBackendData();
-  },[])
-
-  const fetchBackendData = async()=>{
-    const res = await fetch('/character')
-    const data = await res.json();
-    SetBackendData(data)
-  }
-
-
-
-
-
-
-  
-  // create Character
-  const navigate = useNavigate();
+  // Sending the data from my userClass state to generate the char made and useNaigate to navigate to my game page
   const createChar =async()=>{
     const res = await axios.post("/character",userClass)
     console.log(res)
@@ -70,7 +60,6 @@ function App() {
     
   }
 
-  
   return (
     <div className="App">
       <SelectClassProvider>
