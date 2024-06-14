@@ -6,8 +6,10 @@ import { useContext,useEffect,useState } from 'react'
 
 function ClassOption({ClassList,userState,createChar}) {
   const {userClass,setUserClass} = userState
+  //helper state that will track the chosen playstyle 
   const [prevPlaystyle, setPrevPlaystyle] = useState(null);
 
+  // Switch case the will add the stats of the selected playstyle
   const getStatsForPlaystyle = (playstyle) => {
     switch (playstyle) {
       case 'Barbarian':
@@ -34,18 +36,23 @@ function ClassOption({ClassList,userState,createChar}) {
       setPrevPlaystyle(userClass.playstyle);
     }
   }, [userClass.playstyle, prevPlaystyle, setUserClass]);
+
+
   return (
     <div className='classOptions'>
+      {/* listing the api data here;limit 5 */}
         {ClassList.map((playStyle,i) => (
             <div key={i} >
                 <CharClass playStyle={playStyle} setUserClass={setUserClass}/>
             </div>
         ))}
+        {/* will display the playstyle you have chosen */}
         <div className='myClass'>{userClass.playstyle}</div>
         <div>
           <div>
             <div className='intructions'>Please Enter your <span className='highlight'>Name</span>, <span className='highlight'>picture</span>, and <span className='highlight'>Class</span>,then click enter to start</div>
           </div>
+          {/* here the name for character is given */}
           <div className="name" >
             <input type="text"
               value={userClass.name}
@@ -55,6 +62,7 @@ function ClassOption({ClassList,userState,createChar}) {
                   name: e.target.value,
               }))
             }/>
+            {/* On submit the data from the userState will be sent to the backend and navigate to the game page  */}
             <button className="submit" onClick={createChar}>enter</button>
           </div>
         </div>
